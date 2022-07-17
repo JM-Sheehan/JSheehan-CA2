@@ -18,23 +18,11 @@ class ReadableInfoCMPT : public Component
     ///This component could be used for debugging or for keeping readible info that we wish to store in our objects.
     ///One use case will be to keep a readable record of which components our object "own".
 public:
-    ReadableInfoCMPT()
-    {
-        _componentCount = 0;
-        _ComponentsAddedToObject = {};
+    ReadableInfoCMPT();
 
-    }
+    void addComponentDetails(std::string details);
 
-    void addComponentDetails(std::string details)
-    {
-        _ComponentsAddedToObject.emplace(_componentCount++, details);//++ after as I want the old value then update counter.
-    }
-
-    void printComponentDetails()
-    {
-        for (int i = 0; i < _componentCount; i++)
-            cout << _ComponentsAddedToObject[i] << " " << endl;
-    }
+    void printComponentDetails();
 private:
 
     std::map<int, std::string> _ComponentsAddedToObject;

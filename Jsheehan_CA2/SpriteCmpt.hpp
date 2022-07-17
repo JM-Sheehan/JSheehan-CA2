@@ -18,52 +18,22 @@ class SpriteCmpt : public Component
 {
 public:
     ///this will be a non animated sprite, ala simple roguelikes
-    SpriteCmpt()
-    {}
+    SpriteCmpt();
 
-    SpriteCmpt(const sf::Texture& texture)//new v0.5
-    {
-        m_sprite.setTexture(texture);
-    }
+    SpriteCmpt(const sf::Texture& texture);
 
-    SpriteCmpt(std::string filename)//new v0.5
-    {
+    SpriteCmpt(std::string filename);//new v0.5
 
-        auto texture = std::make_unique<sf::Texture>();
-        if (!texture->loadFromFile(filename))
-        {
-            std::cout << "I couldn't load " << filename << std::endl;
-            exit(-1);
-        }
-        m_sprite.setTexture(*texture);
-    }
-    void load_texture(std::string filename)//new v0.5
-    {
-
-        auto texture = std::make_shared<sf::Texture>();
-        if (!texture->loadFromFile(filename))
-        {
-            std::cout << "I couldn't load " << filename << std::endl;
-            exit(-1);
-        }
-        m_sprite.setTexture(*texture);
-    }
+    void load_texture(std::string filename);//new v0.5
 
     void Draw(sf::RenderWindow& window, float timeDelta);
 
     ///Use texture to set our sprite
-    void setTexture(const sf::Texture& texture) //note will only have reference to texture!
-    {
-        m_sprite.setTexture(texture);
-    }
+    void setTexture(const sf::Texture& texture); //note will only have reference to texture!
 
     ///set position
-    void setPosition(sf::Vector2f position)
-    {
-        m_sprite.setPosition(position);
-
-    }
-
+    void setPosition(sf::Vector2f position);
+    
 
 protected:
     sf::Sprite m_sprite;

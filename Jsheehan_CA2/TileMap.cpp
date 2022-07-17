@@ -58,3 +58,5 @@ bool TileMap::load(const std::string& tileset, sf::Vector2u tileSize, std::vecto
 
     return true;
 }
+
+void TileMap::ResetNotes(){}

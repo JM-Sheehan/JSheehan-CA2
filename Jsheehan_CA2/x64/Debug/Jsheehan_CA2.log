@@ -1,174 +1,47 @@
-﻿  AICmpt.cpp
-  AnimatedSpriteCmpt.cpp
+﻿  AnimatedSpriteCmpt.cpp
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\AnimatedSpriteCmpt.cpp(98,47): error C2084: function 'const int AnimatedSpriteCmpt::GetFrameCount(void)' already has a body
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\AnimatedSpriteCmpt.hpp(32): message : see previous definition of 'GetFrameCount'
   CollideCmpt.cpp
-  Component.cpp
   Game.cpp
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\MoveCmpt.hpp(29,24): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\MoveCmpt.hpp(30,24): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(7,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(59,30): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(80,60): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(8,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(46,38): error C2065: 'inputControllerCmpt': undeclared identifier
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(46,23): error C2672: 'Object::GetComponent': no matching overloaded function found
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(46,38): error C2974: 'Object::GetComponent': invalid template argument for 'T', type expected
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Object.hpp(40): message : see declaration of 'Object::GetComponent'
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(47,12): error C3536: 'icmpt': cannot be used before it is initialized
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(47,52): error C2446: '==': no conversion from 'nullptr' to 'int'
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(47,45): message : A native nullptr can only be converted to bool or, using reinterpret_cast, to an integral type
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(49,33): error C2653: 'inputControllerCmpt': is not a class or namespace name
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(49,59): error C2065: 'KEY_LEFT': undeclared identifier
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(51,33): error C2653: 'inputControllerCmpt': is not a class or namespace name
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(51,59): error C2065: 'KEY_RIGHT': undeclared identifier
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(54,33): error C2653: 'inputControllerCmpt': is not a class or namespace name
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(54,59): error C2065: 'KEY_UP': undeclared identifier
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(57,33): error C2653: 'inputControllerCmpt': is not a class or namespace name
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(57,59): error C2065: 'KEY_DOWN': undeclared identifier
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(60,30): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Game.cpp(81,60): warning C4305: 'argument': truncation from 'double' to 'float'
   GraphicsCmpt.cpp
   InputControllerCmpt.cpp
   main.cpp
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\MoveCmpt.hpp(29,24): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\MoveCmpt.hpp(30,24): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\main.cpp(53,28): error C2065: 'inputControllerCmpt': undeclared identifier
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\main.cpp(53,11): error C2672: 'Object::AttachComponent': no matching overloaded function found
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\main.cpp(53,28): error C2974: 'Object::AttachComponent': invalid template argument for 'T', type expected
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\Object.hpp(33): message : see declaration of 'Object::AttachComponent'
   MoveCmpt.cpp
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\MoveCmpt.hpp(29,24): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\MoveCmpt.cpp(13,20): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\MoveCmpt.hpp(30,24): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\MoveCmpt.cpp(14,20): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
   Object.cpp
-  PhysicsCmpt.cpp
   ReadableInfoCmpt.cpp
   SpriteCmpt.cpp
   TextureManager.cpp
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\MoveCmpt.hpp(29,24): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\MoveCmpt.hpp(30,24): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-  TileMap.cpp
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(47,63): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(47,47): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(48,69): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(48,53): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(49,75): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(49,53): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(50,69): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(50,47): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(53,66): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(53,49): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(54,72): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(54,55): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(55,78): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(55,55): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(56,72): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TileMap.cpp(56,49): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-  Window.cpp
   Generating Code...
-C:\Users\barai\source\repos\Jsheehan_CA2\Jsheehan_CA2\TextureManager.cpp(54): warning C4715: 'TextureManager::GetTexture': not all control paths return a value
-  Jsheehan_CA2.vcxproj -> C:\Users\barai\source\repos\Jsheehan_CA2\x64\Debug\Jsheehan_CA2.exe
+C:\college\year_4\Repeats\Game-Dev-C++\Assignments\Jsheehan_CA2\Jsheehan_CA2\TextureManager.cpp(54): warning C4715: 'TextureManager::GetTexture': not all control paths return a value

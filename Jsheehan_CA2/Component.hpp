@@ -12,6 +12,6 @@ public:
     /**
     * Create a virtual function so the class is polymorphic.
     */
-    virtual void Update(float timeDelta) {};
+    virtual void Update(float timeDelta) = 0;
 };
 #endif

@@ -16,7 +16,7 @@
 class GraphicsCmpt : public Component
 {
 public:
-    GraphicsCmpt() {}
+    GraphicsCmpt();
     void Draw(sf::RenderWindow& window, float timeDelta);
 private:
     float m_timeDelta;

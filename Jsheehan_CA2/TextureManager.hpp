@@ -21,7 +21,7 @@ private:
     ///e.g. {filename,  (ID,  pointer to texture)  }
     static std::map<std::string, std::pair<int, std::unique_ptr<sf::Texture>>> m_textures;
 
-    TextureManager() {}
+    TextureManager();
 public:
 
     static int AddTexture(std::string filePath);

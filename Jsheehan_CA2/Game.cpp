@@ -1,5 +1,6 @@
 #include "Game.hpp"
 #include <fstream>
+
 Game::Game() : m_window("Tiling", sf::Vector2u(1280, 800))
 
 {
@@ -82,4 +83,9 @@ void Game::Render() {
 
 
     m_window.EndDraw();
+}
+
+void Game::AddObjects(Object* obj)
+{
+    Game::m_gameObjects.push_back(obj);
 }

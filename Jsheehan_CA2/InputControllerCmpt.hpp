@@ -14,7 +14,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-class inputControllerCmpt : public Component
+class InputControllerCmpt : public Component
 {
 public:
     //new v0.5
@@ -29,62 +29,6 @@ public:
         KEY_SHIFT
     };
     // Returns true if the given key is pressed.
-    bool IsKeyPressed(KEY keycode)
-    {
-        switch (keycode)
-        {
-        case KEY::KEY_SHIFT:
-            if ((sf::Keyboard::isKeyPressed(sf::Keyboard::LShift)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::RShift)))
-            {
-                std::cout << "shift pressed" << std::endl;
-                return true;
-            }
-            break;
-        case KEY::KEY_LEFT:
-            if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) || (sf::Joystick::getAxisPosition(0, sf::Joystick::X) < -40))
-            {
-                std::cout << "leftkey pressed" << std::endl;
-                return true;
-            }
-            break;
-
-        case KEY::KEY_RIGHT:
-            if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) || (sf::Joystick::getAxisPosition(0, sf::Joystick::X) > 40))
-            {
-                std::cout << "rightkey pressed" << std::endl;
-                return true;
-            }
-            break;
-
-        case KEY::KEY_UP:
-            if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) || (sf::Joystick::getAxisPosition(0, sf::Joystick::Y) < -40))
-            {
-                return true;
-            }
-            break;
-
-        case KEY::KEY_DOWN:
-            if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) || (sf::Joystick::getAxisPosition(0, sf::Joystick::Y) > 40))
-            {
-                return true;
-            }
-            break;
-
-        case KEY::KEY_ATTACK:
-            if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Space) || sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)))
-            {
-                return true;
-            }
-            break;
-
-        case KEY::KEY_ESC:
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
+    bool IsKeyPressed(KEY keycode);
 };
 #endif /* inputControllerCmpt_hpp */

@@ -7,6 +7,11 @@
 //
 
 #include "TextureManager.hpp"
+
+TextureManager::TextureManager(){
+
+}
+
 int TextureManager::AddTexture(std::string filePath)
 {
     auto it = m_textures.find(filePath);

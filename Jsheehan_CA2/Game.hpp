@@ -16,19 +16,14 @@ public:
 	Game();
 	~Game();
 
-	void AddObjects(Object* obj)
-	{
-		m_gameObjects.push_back(obj);
-	}
-
+	void AddObjects(Object* obj);
 	void HandleInput();
 	void Update();
 	void Render();
-
 	sf::Time GetElapsed();
 	void RestartClock();
-
 	Window* GetWindow();
+
 private:
 	Window m_window;
 	sf::Clock m_clock;
