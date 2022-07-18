@@ -7,6 +7,7 @@
 #include "SpriteCmpt.hpp"
 #include "InputControllerCmpt.hpp"
 #include "MoveCmpt.hpp"
+#include "AnimatedSpriteCmpt.hpp"
 
 
 

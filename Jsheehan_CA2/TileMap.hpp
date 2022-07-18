@@ -12,6 +12,7 @@
 #include "Window.hpp"
 #include "json.hpp"
 
+
 // Tiles.
 enum  TILE {
     GRASS,  //- passible

@@ -11,6 +11,11 @@
 #include "Component.hpp"
 #include "TileMap.hpp"
 
-void Update(float timeDelta);
-void UpdatePathfinding(TileMap& level, sf::Vector2f playerPosition);
+class AICmpt : Component {
+	public:
+		void Update(float timeDelta);
+		void UpdatePathfinding(TileMap& level, sf::Vector2f playerPosition);
+	private:
+};
+
 #endif /* AICmpt_hpp */

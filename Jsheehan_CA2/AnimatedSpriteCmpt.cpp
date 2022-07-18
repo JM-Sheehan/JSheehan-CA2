@@ -1,11 +1,13 @@
 #include "AnimatedSpriteCmpt.hpp"
 
-AnimatedSpriteCmpt::AnimatedSpriteCmpt(){}
+
+AnimatedSpriteCmpt::AnimatedSpriteCmpt(){
+
+}
 
 AnimatedSpriteCmpt::AnimatedSpriteCmpt(const sf::Texture& texture, int frames =
     1, int frameSpeed = 0) :m_frameCount(frames), m_animationSpeed(frameSpeed)
 {
-
     setTexture(texture); //since m_texture  is private member of parent class, will use utility function setTexture
 }
 
@@ -91,7 +93,10 @@ void AnimatedSpriteCmpt::NextFrame() {
     else
         m_currentFrame++;
 
+    std::cout << std::to_string(m_currentFrame);
+
     // update the texture rect
+    //m_sprite.setTextureRect(sf::IntRect(m_frameWidth, 0, m_frameWidth, m_frameHeight));
     m_sprite.setTextureRect(sf::IntRect(m_frameWidth * m_currentFrame, 0, m_frameWidth, m_frameHeight));
 }
 

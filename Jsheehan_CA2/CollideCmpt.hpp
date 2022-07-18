@@ -13,9 +13,6 @@
 
 #include "SFML/Graphics.hpp"
 using namespace sf;
-class collideCmpt;
-
-
 
 class CollideCmpt : public Component
 {

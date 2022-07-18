@@ -1,23 +1,5 @@
-
-//
-// Disclaimer:
-// ----------
-//
-// This code will work o  nly if you selected window, graphics and audio.
-//
-// Note that the "Run Script" build phase will copy the required frameworks
-// or dylibs to your application bundle so you can execute it on any OS X
-// computer.
-//
-// Your resource files (images, sounds, fonts, ...) are also copied to your
-// application bundle. To get the path to these resources, use the helper
-// function `resourcePath()` from ResourcePath.hpp
-//
-
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
-
-// Here is a small helper for you! Have a look.
 #include "ResourcePath.hpp"
 #include "Object.hpp"
 #include "Component.hpp"
@@ -43,15 +25,15 @@ int main(int, char const**)
     Object player;
     player.AttachComponent<ReadableInfoCMPT>();
     player.AttachComponent<SpriteCmpt>();
-    player.GetComponent<ReadableInfoCMPT>()->addComponentDetails("spriteCmpt");
+    player.GetComponent<ReadableInfoCMPT>()->addComponentDetails("SpriteCmpt");
 
     player.GetComponent<SpriteCmpt>()->setPosition(sf::Vector2f(0, 0));
     player.AttachComponent<MoveCmpt>(sf::Vector2f(10, 10));
     player.GetComponent<ReadableInfoCMPT>()->addComponentDetails("MoveCmpt");
 
     //player.AttachComponent<spriteCmpt>("spr_archer_idle_down.png");
-    player.AttachComponent<inputControllerCmpt>();
-    player.GetComponent<ReadableInfoCMPT>()->addComponentDetails("inputControllerCmpt");
+    player.AttachComponent<InputControllerCmpt>();
+    player.GetComponent<ReadableInfoCMPT>()->addComponentDetails("InputControllerCmpt");
     auto tempTextureID = TextureManager::AddTexture("archer/spr_archer_idle_down.png");
     if (tempTextureID == -1)
     {
@@ -62,7 +44,23 @@ int main(int, char const**)
     sprcmpt->setTexture(TextureManager::GetTexture(tempTextureID));
     sprcmpt->setPosition(sf::Vector2f(10, 5));
 
+    Object animatedCharacter;
+    animatedCharacter.AttachComponent<ReadableInfoCMPT>();
+    animatedCharacter.AttachComponent<AnimatedSpriteCmpt>();
+    animatedCharacter.GetComponent<ReadableInfoCMPT>()->addComponentDetails("AnimatedSpriteCmpt");
 
+    animatedCharacter.GetComponent<AnimatedSpriteCmpt>()->setPosition(sf::Vector2f(50, 20));
+    animatedCharacter.GetComponent<ReadableInfoCMPT>()->addComponentDetails("MoveCmpt");
+
+    auto aCharTempTexture = TextureManager::AddTexture("enemies/goblin/spr_goblin_walk_down.png");
+    if (tempTextureID == -1)
+    {
+        std::cout << "couldn't add texture to animated character sprite component\n";
+        exit(0);
+    }
+    auto aCharSprCmpt = animatedCharacter.GetComponent<AnimatedSpriteCmpt>();
+    aCharSprCmpt->SetSprite(TextureManager::GetTexture(aCharTempTexture), 8, 1);
+    aCharSprCmpt->SetAnimated(true);
 
     Object Enemy;
     //BODY_skeleton.png
@@ -88,10 +86,12 @@ int main(int, char const**)
     Enemy.GetComponent<MoveCmpt>()->setPosition({ 40,50 });
     Object Block;
 
+    
 
     Game game;
     game.AddObjects(&player);
     game.AddObjects(&Enemy);
+    game.AddObjects(&animatedCharacter);
 
     while (!game.GetWindow()->IsDone()) {
         game.HandleInput();

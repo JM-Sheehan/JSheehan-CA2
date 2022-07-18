@@ -1,11 +1,3 @@
-//
-//  TextureManager.cpp
-//  SimplisticComponentECS
-//
-//  Created by Denis Flynn on 10/11/2021.
-//  Copyright © 2021 Denis Flynn. All rights reserved.
-//
-
 #include "TextureManager.hpp"
 
 TextureManager::TextureManager(){

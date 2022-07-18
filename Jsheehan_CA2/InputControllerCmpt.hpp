@@ -18,6 +18,10 @@ class InputControllerCmpt : public Component
 {
 public:
     //new v0.5
+    InputControllerCmpt() {
+
+    } 
+
     enum class KEY
     {
         KEY_LEFT,
@@ -28,6 +32,9 @@ public:
         KEY_ESC,
         KEY_SHIFT
     };
+    void Update(float timeDelta) {
+
+    }
     // Returns true if the given key is pressed.
     bool IsKeyPressed(KEY keycode);
 };

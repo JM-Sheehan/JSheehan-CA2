@@ -34,7 +34,9 @@ public:
     ///set position
     void setPosition(sf::Vector2f position);
     
+    void Update(float timeDelta) {
 
+    }
 protected:
     sf::Sprite m_sprite;
 

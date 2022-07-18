@@ -23,6 +23,10 @@ public:
     void addComponentDetails(std::string details);
 
     void printComponentDetails();
+
+    void Update(float timeDelta) {
+
+    }
 private:
 
     std::map<int, std::string> _ComponentsAddedToObject;

@@ -5,7 +5,8 @@ Game::Game() : m_window("Tiling", sf::Vector2u(1280, 800))
 
 {
     m_clock.restart();
-    srand(time(nullptr));
+    unsigned int var = time(nullptr);
+    srand(var);
     //mapSprite_ = nullptr;
     nlohmann::json jsonMap;
     std::ifstream inJson("level1.json");
@@ -43,21 +44,21 @@ void Game::HandleInput() {
     {
         auto movecmpt = i->GetComponent<MoveCmpt>();
 
-        auto icmpt = i->GetComponent<inputControllerCmpt>();
+        auto icmpt = i->GetComponent<InputControllerCmpt>();
         if (movecmpt == nullptr || icmpt == nullptr)
             break;
-        if (icmpt->IsKeyPressed(inputControllerCmpt::KEY::KEY_LEFT))
+        if (icmpt->IsKeyPressed(InputControllerCmpt::KEY::KEY_LEFT))
             movecmpt->updatePosition({ -1,0 });
-        if (icmpt->IsKeyPressed(inputControllerCmpt::KEY::KEY_RIGHT))
+        if (icmpt->IsKeyPressed(InputControllerCmpt::KEY::KEY_RIGHT))
             movecmpt->updatePosition({ 1,0 });
 
-        if (icmpt->IsKeyPressed(inputControllerCmpt::KEY::KEY_UP))
+        if (icmpt->IsKeyPressed(InputControllerCmpt::KEY::KEY_UP))
             movecmpt->updatePosition({ 0,-1 });
 
-        if (icmpt->IsKeyPressed(inputControllerCmpt::KEY::KEY_DOWN))
+        if (icmpt->IsKeyPressed(InputControllerCmpt::KEY::KEY_DOWN))
             movecmpt->updatePosition({ 0,1 });
 
-        movecmpt->Update(0.01);
+        movecmpt->Update(0.01f);
     }
 
 
@@ -74,11 +75,17 @@ void Game::Render() {
 
     for (auto& i : m_gameObjects)
     {
+
         auto sprCmpt = i->GetComponent<SpriteCmpt>();
         auto moveCmpt = i->GetComponent<MoveCmpt>();
-        if (sprCmpt != nullptr && moveCmpt != nullptr)            sprCmpt->setPosition(moveCmpt->getPosition());
-        if (sprCmpt != nullptr)
-            sprCmpt->Draw(*m_window.GetRenderWindow(), 0.01);
+        auto animatedSprCmpt = i->GetComponent<AnimatedSpriteCmpt>();
+
+        if (sprCmpt != nullptr && moveCmpt != nullptr) sprCmpt->setPosition(moveCmpt->getPosition());
+        if (sprCmpt != nullptr) sprCmpt->Draw(*m_window.GetRenderWindow(), 0.01f);
+
+        if (animatedSprCmpt != nullptr && moveCmpt != nullptr) animatedSprCmpt->setPosition(moveCmpt->getPosition());
+        if (animatedSprCmpt != nullptr) animatedSprCmpt->Draw(*m_window.GetRenderWindow(), 0.01f);
+
     }
 
 

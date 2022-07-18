@@ -21,9 +21,9 @@ void  TileMap::draw(sf::RenderTarget& target, sf::RenderStates states) const
 
 bool TileMap::load(const std::string& tileset, sf::Vector2u tileSize, std::vector<int> tiles, unsigned int width, unsigned int height)
 {
-    // load the tileset texture
-    //if (!m_tileset.loadFromFile(resourcePath() + tileset))
-    //    return false;
+    /* load the tileset texture*/
+    if (!m_tileset.loadFromFile(tileset))
+        return false;
 
     // resize the vertex array to fit the level size
     m_vertices.setPrimitiveType(sf::Quads);

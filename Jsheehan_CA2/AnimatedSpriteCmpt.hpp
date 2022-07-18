@@ -10,7 +10,7 @@
 #define AnimatedSpriteCmpt_hpp
 
 #include "SpriteCmpt.hpp"
-
+#include <string>
 class AnimatedSpriteCmpt : public SpriteCmpt
 {
 public:
@@ -29,10 +29,7 @@ public:
     
 
     // Gets the frame count of the object.
-    const int  GetFrameCount()
-    {
-        return m_frameCount;
-    }
+    const int  GetFrameCount();
 
 private:
     bool m_isAnimated;

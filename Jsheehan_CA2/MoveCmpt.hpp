@@ -16,15 +16,17 @@ class MoveCmpt : public Component
 
 public:
     MoveCmpt();
-    MoveCmpt(int, int);
-    MoveCmpt(sf::Vector2f );
+    MoveCmpt(int x, int y);
+    MoveCmpt(sf::Vector2f pos);
 
-    void setPosition(sf::Vector2f);
+    void setPosition(sf::Vector2f pos);
     sf::Vector2f getPosition();
 
     void updatePosition();
-    void updatePosition(sf::Vector2f);
+    void updatePosition(sf::Vector2f speed);
+    void Update(float timeDelta) {
 
+    }
 private:
     sf::Vector2f m_position;
     //new v0.5

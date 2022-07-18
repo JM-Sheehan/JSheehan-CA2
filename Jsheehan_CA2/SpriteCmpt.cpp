@@ -9,16 +9,18 @@
 #include "SpriteCmpt.hpp"
 
 SpriteCmpt::SpriteCmpt() {
-
+    m_timeDelta = 0;
 }
 
 SpriteCmpt::SpriteCmpt(const sf::Texture& texture)//new v0.5
 {
+    m_timeDelta = 0;
     m_sprite.setTexture(texture);
 }
 
 SpriteCmpt::SpriteCmpt(std::string filename)//new v0.5
 {
+    m_timeDelta = 0;
 
     auto texture = std::make_unique<sf::Texture>();
     if (!texture->loadFromFile(filename))
@@ -58,8 +60,6 @@ void SpriteCmpt::setPosition(sf::Vector2f position)
 
 void SpriteCmpt::Draw(sf::RenderWindow& window, float timeDelta)
 {
-    //m_timeDelta += timeDelta;//really only needed for animation
-
 
     window.draw(m_sprite);
 }
